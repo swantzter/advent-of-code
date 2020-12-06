@@ -2,10 +2,7 @@ import { readFileSync } from 'fs'
 
 const input = readFileSync('./input.txt', { encoding: 'utf-8' })
   .split('\n\n')
-  .map(group => {
-    return group.split('\n')
-      .map(person => new Set(person.split('')))
-  })
+  .map(group => group.split('\n').map(person => new Set(person)))
 
 // trailing \n
 input[input.length - 1].pop()
