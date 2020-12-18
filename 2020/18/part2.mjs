@@ -30,7 +30,6 @@ function insertParenthesis (stack) {
 }
 
 let sum = 0
-const numeric = /^\d+$/
 for (const row of input) {
   let stack = []
   let parents = []
@@ -49,7 +48,7 @@ for (const row of input) {
       cursor = child
       continue
     }
-    if (token !== '') cursor.push(numeric.test(token) ? parseInt(token, 10) : token)
+    if (token !== '') cursor.push(token)
     if (sep === ')') {
       cursor.push(sep)
       cursor = parents.pop()
