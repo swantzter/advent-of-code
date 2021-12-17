@@ -18,7 +18,7 @@ for (let ivx = 0; ivx < 100; ivx++) {
 
     let ymax = y
 
-    while (x < target.xmax && y > target.ymax) {
+    while (y >= target.ymin) {
       x += vx
       y += vy
       vy -= 1
