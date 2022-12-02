@@ -1,5 +1,5 @@
-import { readFileSync } from 'fs'
-import { join as pjoin } from 'path'
+import { readFileSync } from 'node:fs'
+import { join as pjoin } from 'node:path'
 
 const __dirname = new URL('.', import.meta.url).pathname
 const input = readFileSync(process.argv[2] ? pjoin(process.cwd(), process.argv[2]) : pjoin(__dirname, './input.txt'), { encoding: 'utf-8' }).trim()
