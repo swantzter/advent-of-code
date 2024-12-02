@@ -19,7 +19,6 @@ def main ():
   reports = parse()
   num_safe: int = sum(any(safe(r) for r in itertools.combinations(report, len(report) - 1)) for report in reports)
 
-
   print(num_safe)
 
 if __name__ == "__main__":
