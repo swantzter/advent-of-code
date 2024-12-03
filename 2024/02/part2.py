@@ -2,7 +2,7 @@ import sys
 import pathlib
 import itertools
 
-DEFAULT_FILE = pathlib.Path(__file__).parent.resolve().joinpath("data.txt")
+DEFAULT_FILE = pathlib.Path(__file__).parent.resolve().joinpath("input.txt")
 
 
 def parse() -> list[list[int]]:
